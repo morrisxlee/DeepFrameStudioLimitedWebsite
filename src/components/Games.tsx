@@ -28,11 +28,11 @@ export default function Games({ dict }: GamesProps) {
         <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/[0.02] hover:border-violet-500/20 transition-all mb-8">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Cover */}
-            <div className="h-64 lg:h-auto relative overflow-hidden">
+            <div className="relative overflow-hidden flex items-center justify-center bg-black/20">
               <img
-                src="/assets/images/Website OG.png"
+                src="/assets/images/isekai HKV宣傳單1.png"
                 alt={g.isekaiHKV.title}
-                className="w-full h-full object-cover"
+                className="max-w-full h-auto"
               />
             </div>
 
