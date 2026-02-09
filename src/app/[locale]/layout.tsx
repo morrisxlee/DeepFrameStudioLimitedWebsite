@@ -73,7 +73,7 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: `${baseUrl}/assets/images/Website OG.png`,
+          url: `${baseUrl}/assets/images/og-image.png`,
           width: 1200,
           height: 630,
           alt: isZh ? "深幀工作室有限公司" : "Deep Frame Studio Limited",
@@ -84,7 +84,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: isZh ? "深幀工作室有限公司" : "Deep Frame Studio Limited",
       description,
-      images: [`${baseUrl}/assets/images/Website OG.png`],
+      images: [`${baseUrl}/assets/images/og-image.png`],
     },
     robots: {
       index: true,

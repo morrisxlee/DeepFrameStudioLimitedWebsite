@@ -417,7 +417,7 @@ const en: Dictionary = {
         source: "Ming Pao",
         date: "2025-10-17",
         url: "https://news.mingpao.com/pns/%E5%89%AF%E5%88%8A/article/20251017/s00005/1760631058140",
-        description: "An in-depth feature by Ming Pao covering the founding story of Deep Frame Studio Limited — from the perspective of Hong Kong indie game developers. The article explores how the team built a VTuber-themed pixel-art roguelike game 'Isekai HKV' from scratch, the challenges of game development, the state of Hong Kong's gaming industry, and the team's vision for the future.",
+        description: "Ming Pao feature coverage on the team's VTuber-themed pixel-art roguelike game 'Isekai HKV'. The article covers the challenges of game development, the current state of Hong Kong's gaming industry, and Hong Kong VTubers' vision for the future.",
       },
     ],
     imageSection: {
