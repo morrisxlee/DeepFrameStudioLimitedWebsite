@@ -251,7 +251,7 @@ const zh: Dictionary = {
         source: "明報",
         date: "2025-10-17",
         url: "https://news.mingpao.com/pns/%E5%89%AF%E5%88%8A/article/20251017/s00005/1760631058140",
-        description: "明報副刊深度報道深幀工作室有限公司的創業故事，從香港獨立遊戲開發者的角度出發，分享團隊如何從零開始打造以 VTuber 為主題的像素風 Roguelike 遊戲「異世界港V」。報道涵蓋遊戲開發的挑戰、香港遊戲產業的現況，以及團隊對未來的願景。",
+        description: "明報副刊報道團隊以 VTuber 為主題的像素風 Roguelike 遊戲「異世界港V」。報道涵蓋遊戲開發的挑戰、香港遊戲產業的現況，以及香港Vtuber對未來的願景。",
       },
     ],
     imageSection: {

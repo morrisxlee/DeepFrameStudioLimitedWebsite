@@ -71,11 +71,20 @@ export async function generateMetadata({
       siteName: "Deep Frame Studio Limited",
       locale: isZh ? "zh_HK" : "en_US",
       type: "website",
+      images: [
+        {
+          url: `${baseUrl}/assets/images/Website OG.png`,
+          width: 1200,
+          height: 630,
+          alt: isZh ? "深幀工作室有限公司" : "Deep Frame Studio Limited",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: isZh ? "深幀工作室有限公司" : "Deep Frame Studio Limited",
       description,
+      images: [`${baseUrl}/assets/images/Website OG.png`],
     },
     robots: {
       index: true,
