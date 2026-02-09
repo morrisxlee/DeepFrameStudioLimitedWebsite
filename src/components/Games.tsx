@@ -1,4 +1,4 @@
-import { ExternalLink, Gamepad2, Sparkles } from "lucide-react";
+import { ExternalLink, Sparkles } from "lucide-react";
 import type { Dictionary } from "@/i18n/dictionaries";
 
 interface GamesProps {
@@ -28,16 +28,12 @@ export default function Games({ dict }: GamesProps) {
         <div className="rounded-2xl overflow-hidden border border-white/5 bg-white/[0.02] hover:border-violet-500/20 transition-all mb-8">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Cover */}
-            <div className="h-64 lg:h-auto bg-gradient-to-br from-violet-600 via-indigo-600 to-cyan-600 flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 opacity-20" style={{
-                backgroundImage: "radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 40%)"
-              }} />
-              <div className="relative text-center px-8">
-                <Gamepad2 size={48} className="text-white/40 mx-auto mb-4" />
-                <span className="text-white/60 text-4xl sm:text-5xl font-bold tracking-tight">
-                  {g.isekaiHKV.title}
-                </span>
-              </div>
+            <div className="h-64 lg:h-auto relative overflow-hidden">
+              <img
+                src="/assets/images/Website OG.png"
+                alt={g.isekaiHKV.title}
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Details */}

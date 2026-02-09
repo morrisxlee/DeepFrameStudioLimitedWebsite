@@ -13,11 +13,11 @@ export default function Navbar({ dict, locale }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
-    { label: dict.nav.about, href: "#about" },
-    { label: dict.nav.services, href: "#services" },
-    { label: dict.nav.games, href: "#games" },
+    { label: dict.nav.about, href: `/${locale}#about` },
+    { label: dict.nav.services, href: `/${locale}#services` },
+    { label: dict.nav.games, href: `/${locale}#games` },
     { label: dict.nav.media, href: `/${locale}/media` },
-    { label: dict.nav.contact, href: "#contact" },
+    { label: dict.nav.contact, href: `/${locale}#contact` },
   ];
 
   const otherLocale = locale === "zh-hk" ? "en" : "zh-hk";

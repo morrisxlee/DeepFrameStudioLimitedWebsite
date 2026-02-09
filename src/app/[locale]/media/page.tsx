@@ -1,7 +1,8 @@
 import { locales, getDictionary, type Locale } from "@/i18n/dictionaries";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ExternalLink, Newspaper, ImageIcon } from "lucide-react";
+import { ExternalLink, Newspaper } from "lucide-react";
+import Image from "next/image";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -39,69 +40,57 @@ export default async function MediaPage({
             <p className="text-zinc-400 text-lg">{m.description}</p>
           </div>
 
-          {/* Articles */}
-          <div className="space-y-6 mb-16">
+          {/* Articles — text left, image right */}
+          <div className="space-y-8">
             {m.articles.map((article, i) => (
-              <a
+              <div
                 key={i}
-                href={article.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block rounded-2xl border border-white/5 bg-white/[0.02] p-6 sm:p-8 hover:border-violet-500/20 transition-all group"
+                className="rounded-2xl border border-white/5 bg-white/[0.02] overflow-hidden hover:border-violet-500/20 transition-all"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-violet-500/10 flex items-center justify-center shrink-0 group-hover:bg-violet-500/20 transition-colors">
-                    <Newspaper size={24} className="text-violet-400" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2 flex-wrap">
-                      <span className="text-xs font-medium text-zinc-500 uppercase tracking-wider">
-                        {article.source}
-                      </span>
-                      <span className="text-xs text-zinc-600">{article.date}</span>
+                <div className="grid grid-cols-1 lg:grid-cols-2">
+                  {/* Left — Article Content */}
+                  <div className="p-6 sm:p-8 flex flex-col justify-center">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center shrink-0">
+                        <Newspaper size={20} className="text-violet-400" />
+                      </div>
+                      <div>
+                        <span className="text-xs font-medium text-zinc-500 uppercase tracking-wider">
+                          {article.source}
+                        </span>
+                        <span className="text-xs text-zinc-600 ml-2">{article.date}</span>
+                      </div>
                     </div>
-                    <h2 className="text-xl font-semibold text-white mb-2 group-hover:text-violet-300 transition-colors">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-white mb-3">
                       {article.title}
                     </h2>
-                    <p className="text-zinc-400 text-sm leading-relaxed mb-3">
+                    <p className="text-zinc-400 text-sm leading-relaxed mb-6">
                       {article.description}
                     </p>
-                    <span className="inline-flex items-center gap-1.5 text-sm text-violet-400">
+                    <a
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 text-white font-medium text-sm hover:opacity-90 transition-opacity w-fit"
+                    >
                       {locale === "zh-hk" ? "閱讀全文" : "Read Article"}
                       <ExternalLink size={14} />
-                    </span>
+                    </a>
+                  </div>
+
+                  {/* Right — Image */}
+                  <div className="relative aspect-[4/3] lg:aspect-auto">
+                    <Image
+                      src="/assets/images/港產vtuber煉成路.jpg"
+                      alt={article.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
                   </div>
                 </div>
-              </a>
+              </div>
             ))}
-          </div>
-
-          {/* Image Gallery Section */}
-          <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-zinc-800 flex items-center justify-center">
-                <ImageIcon size={20} className="text-zinc-500" />
-              </div>
-              <h2 className="text-xl font-semibold text-white">
-                {m.imageSection.title}
-              </h2>
-            </div>
-
-            {/* Image Grid — images from public/assets/media/ */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-              {/* Placeholder — replace with actual images */}
-              <div className="aspect-video rounded-xl border-2 border-dashed border-white/10 flex items-center justify-center">
-                <p className="text-zinc-600 text-sm text-center px-4">
-                  {m.imageSection.placeholder}
-                </p>
-              </div>
-            </div>
-
-            <p className="text-xs text-zinc-600">
-              {locale === "zh-hk"
-                ? "提示：將圖片放入 public/assets/media/ 資料夾後，在此處加入 <img> 標籤即可顯示。"
-                : "Tip: Place images in public/assets/media/ folder, then add <img> tags here to display them."}
-            </p>
           </div>
         </div>
       </main>
