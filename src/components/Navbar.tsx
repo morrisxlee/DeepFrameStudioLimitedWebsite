@@ -28,9 +28,11 @@ export default function Navbar({ dict, locale }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href={`/${locale}`} className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-cyan-400 flex items-center justify-center font-bold text-sm text-white">
-            DF
-          </div>
+          <img
+            src="/assets/logo/DEEP FRAME STUDIO LOGO black background.png"
+            alt="Deep Frame Studio"
+            className="w-8 h-8 rounded-lg object-cover"
+          />
           <span className="text-white font-semibold text-lg tracking-tight hidden sm:block">
             Deep Frame Studio
           </span>

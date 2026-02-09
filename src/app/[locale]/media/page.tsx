@@ -92,7 +92,7 @@ export default async function MediaPage({
           </div>
         </div>
       </main>
-      <Footer dict={dict} />
+      <Footer dict={dict} locale={locale} />
     </>
   );
 }

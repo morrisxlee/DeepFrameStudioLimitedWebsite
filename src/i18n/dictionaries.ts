@@ -251,7 +251,7 @@ const zh: Dictionary = {
         source: "明報",
         date: "2025-10-17",
         url: "https://news.mingpao.com/pns/%E5%89%AF%E5%88%8A/article/20251017/s00005/1760631058140",
-        description: "明報副刊有關深幀工作室及其遊戲開發的報道。",
+        description: "明報副刊深度報道深幀工作室有限公司的創業故事，從香港獨立遊戲開發者的角度出發，分享團隊如何從零開始打造以 VTuber 為主題的像素風 Roguelike 遊戲「異世界港V」。報道涵蓋遊戲開發的挑戰、香港遊戲產業的現況，以及團隊對未來的願景。",
       },
     ],
     imageSection: {
@@ -417,7 +417,7 @@ const en: Dictionary = {
         source: "Ming Pao",
         date: "2025-10-17",
         url: "https://news.mingpao.com/pns/%E5%89%AF%E5%88%8A/article/20251017/s00005/1760631058140",
-        description: "Ming Pao feature coverage on Deep Frame Studio and its game development journey.",
+        description: "An in-depth feature by Ming Pao covering the founding story of Deep Frame Studio Limited — from the perspective of Hong Kong indie game developers. The article explores how the team built a VTuber-themed pixel-art roguelike game 'Isekai HKV' from scratch, the challenges of game development, the state of Hong Kong's gaming industry, and the team's vision for the future.",
       },
     ],
     imageSection: {

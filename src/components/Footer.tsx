@@ -1,10 +1,11 @@
-import type { Dictionary } from "@/i18n/dictionaries";
+import type { Dictionary, Locale } from "@/i18n/dictionaries";
 
 interface FooterProps {
   dict: Dictionary;
+  locale?: Locale;
 }
 
-export default function Footer({ dict }: FooterProps) {
+export default function Footer({ dict, locale = "zh-hk" }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
@@ -13,9 +14,11 @@ export default function Footer({ dict }: FooterProps) {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           {/* Logo & Company */}
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-cyan-400 flex items-center justify-center font-bold text-sm text-white">
-              DF
-            </div>
+            <img
+              src="/assets/logo/DEEP FRAME STUDIO LOGO black background.png"
+              alt="Deep Frame Studio"
+              className="w-8 h-8 rounded-lg object-cover"
+            />
             <div>
               <p className="text-white font-semibold text-sm">
                 Deep Frame Studio Limited
@@ -26,20 +29,20 @@ export default function Footer({ dict }: FooterProps) {
 
           {/* Links */}
           <div className="flex items-center gap-6 text-sm text-zinc-500">
-            <a href="#about" className="hover:text-zinc-300 transition-colors">
+            <a href={`/${locale}#about`} className="hover:text-zinc-300 transition-colors">
               {dict.nav.about}
             </a>
             <a
-              href="#services"
+              href={`/${locale}#services`}
               className="hover:text-zinc-300 transition-colors"
             >
               {dict.nav.services}
             </a>
-            <a href="#games" className="hover:text-zinc-300 transition-colors">
+            <a href={`/${locale}#games`} className="hover:text-zinc-300 transition-colors">
               {dict.nav.games}
             </a>
             <a
-              href="#contact"
+              href={`/${locale}#contact`}
               className="hover:text-zinc-300 transition-colors"
             >
               {dict.nav.contact}

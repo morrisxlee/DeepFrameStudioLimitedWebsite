@@ -32,7 +32,7 @@ export default async function LocalePage({
       <Games dict={dict} />
       <FAQ dict={dict} />
       <Contact dict={dict} />
-      <Footer dict={dict} />
+      <Footer dict={dict} locale={locale} />
     </>
   );
 }

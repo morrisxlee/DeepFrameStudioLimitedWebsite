@@ -37,8 +37,8 @@ export default function Games({ dict }: GamesProps) {
             </div>
 
             {/* Details */}
-            <div className="p-8 lg:p-10">
-              <div className="flex items-center gap-3 mb-4 flex-wrap">
+            <div className="p-8 lg:p-12 flex flex-col justify-center">
+              <div className="flex items-center gap-3 mb-5 flex-wrap">
                 <span className="text-xs font-medium text-zinc-500 uppercase tracking-wider">
                   {g.isekaiHKV.genre}
                 </span>
@@ -47,18 +47,18 @@ export default function Games({ dict }: GamesProps) {
                 </span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-5">
                 {g.isekaiHKV.title}
               </h3>
 
-              <p className="text-zinc-400 leading-relaxed mb-6">
+              <p className="text-zinc-400 leading-relaxed mb-8 text-base">
                 {g.isekaiHKV.description}
               </p>
 
               {/* Features */}
-              <ul className="space-y-2 mb-8">
+              <ul className="space-y-3 mb-10">
                 {g.isekaiHKV.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-zinc-400">
+                  <li key={i} className="flex items-start gap-2.5 text-sm text-zinc-400">
                     <Sparkles size={14} className="text-violet-400 mt-0.5 shrink-0" />
                     {feature}
                   </li>
@@ -70,7 +70,7 @@ export default function Games({ dict }: GamesProps) {
                 href="https://store.steampowered.com/app/3948940/V/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 text-white font-medium text-sm hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 text-white font-medium text-sm hover:opacity-90 transition-opacity w-fit"
               >
                 {g.isekaiHKV.steamCta}
                 <ExternalLink size={14} />
