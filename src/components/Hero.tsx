@@ -39,9 +39,9 @@ export default function Hero({ dict }: HeroProps) {
           </span>
         </h1>
 
-        {/* Chinese Name */}
+        {/* Subtitle (English name for zh, Chinese name for en) */}
         <p className="text-xl sm:text-2xl text-zinc-500 font-medium mb-6">
-          {dict.hero.chineseName}
+          {dict.hero.subtitle}
         </p>
 
         {/* Tagline */}

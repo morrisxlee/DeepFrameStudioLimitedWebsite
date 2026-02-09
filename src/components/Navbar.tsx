@@ -16,6 +16,7 @@ export default function Navbar({ dict, locale }: NavbarProps) {
     { label: dict.nav.about, href: "#about" },
     { label: dict.nav.services, href: "#services" },
     { label: dict.nav.games, href: "#games" },
+    { label: dict.nav.media, href: `/${locale}/media` },
     { label: dict.nav.contact, href: "#contact" },
   ];
 

@@ -10,13 +10,14 @@ export interface Dictionary {
     about: string;
     services: string;
     games: string;
+    media: string;
     contact: string;
   };
   hero: {
     badge: string;
     title1: string;
     title2: string;
-    chineseName: string;
+    subtitle: string;
     tagline: string;
     cta1: string;
     cta2: string;
@@ -86,6 +87,22 @@ export interface Dictionary {
       answer: string;
     }[];
   };
+  media: {
+    label: string;
+    title: string;
+    description: string;
+    articles: {
+      title: string;
+      source: string;
+      date: string;
+      url: string;
+      description: string;
+    }[];
+    imageSection: {
+      title: string;
+      placeholder: string;
+    };
+  };
 }
 
 const zh: Dictionary = {
@@ -95,13 +112,14 @@ const zh: Dictionary = {
     about: "關於我們",
     services: "服務",
     games: "遊戲",
+    media: "相關報道",
     contact: "聯絡我們",
   },
   hero: {
     badge: "遊戲開發工作室",
-    title1: "Deep Frame",
-    title2: "Studio",
-    chineseName: "深幀工作室有限公司",
+    title1: "深幀工作室",
+    title2: "有限公司",
+    subtitle: "Deep Frame Studio Limited",
     tagline:
       "我們打造沉浸式遊戲體驗，突破創意與技術的界限。每一幀都訴說一個故事。",
     cta1: "探索我們的遊戲",
@@ -112,7 +130,7 @@ const zh: Dictionary = {
     title: "匠心打造世界，",
     titleFaded: "逐幀呈現精彩",
     description:
-      "深幀工作室有限公司是一家獨立遊戲開發公司，致力於創造令人難忘的互動體驗。從概念設計到最終發佈，我們以精湛的技藝處理開發的每一個環節。",
+      "深幀工作室有限公司（Deep Frame Studio Limited）是一家香港遊戲公司，專注於打造二次元或動漫風格的遊戲。我們涵蓋從遊戲設計、開發、美術到發行的全方位服務。",
     mission: {
       title: "我們的使命",
       description:
@@ -165,7 +183,7 @@ const zh: Dictionary = {
     title: "開發中的作品",
     description: "深幀工作室的每一個項目都傾注了熱情。以下是我們正在打造的作品。",
     isekaiHKV: {
-      title: "Isekai HKV — 異世界 HKV",
+      title: "異世界港V",
       genre: "2D 像素風 Roguelike",
       status: "開發中 · 2026年發售",
       description:
@@ -204,12 +222,12 @@ const zh: Dictionary = {
       {
         question: "深幀工作室是做什麼的？",
         answer:
-          "深幀工作室有限公司（Deep Frame Studio Limited）是一家位於香港的獨立遊戲開發公司，專注於打造沉浸式的互動遊戲體驗。我們涵蓋從遊戲設計、開發、美術到發行的全方位服務。",
+          "深幀工作室有限公司是一家香港遊戲公司，專注於打造二次元或動漫風格的遊戲。我們涵蓋從遊戲設計、開發、美術到發行的全方位服務。",
       },
       {
-        question: "Isekai HKV 是什麼遊戲？",
+        question: "異世界港V 是什麼遊戲？",
         answer:
-          "「異世界 HKV」是我們開發中的旗艦作品，一款以 VTuber 穿越異世界為主題的 2D 俯視像素風 Roguelike 遊戲。玩家扮演勇者「DD」，與 VTuber 夥伴一起冒險、擊敗魔王。預計 2026 年發售，現在可在 Steam 上加入願望清單。",
+          "「異世界港V」是我們開發中的旗艦作品，一款以 VTuber 穿越異世界為主題的 2D 俯視像素風 Roguelike 遊戲。玩家扮演勇者「DD」，與 VTuber 夥伴一起冒險、擊敗魔王。預計 2026 年發售，現在可在 Steam 上加入願望清單。",
       },
       {
         question: "如何聯絡深幀工作室？",
@@ -223,6 +241,24 @@ const zh: Dictionary = {
       },
     ],
   },
+  media: {
+    label: "相關報道",
+    title: "媒體報道",
+    description: "以下是有關深幀工作室的相關新聞報道。",
+    articles: [
+      {
+        title: "明報副刊報道",
+        source: "明報",
+        date: "2025-10-17",
+        url: "https://news.mingpao.com/pns/%E5%89%AF%E5%88%8A/article/20251017/s00005/1760631058140",
+        description: "明報副刊有關深幀工作室及其遊戲開發的報道。",
+      },
+    ],
+    imageSection: {
+      title: "報道圖片",
+      placeholder: "將報道相關圖片放入 public/assets/media/ 資料夾",
+    },
+  },
 };
 
 const en: Dictionary = {
@@ -232,13 +268,14 @@ const en: Dictionary = {
     about: "About",
     services: "Services",
     games: "Games",
+    media: "Media",
     contact: "Contact",
   },
   hero: {
     badge: "Game Development Studio",
     title1: "Deep Frame",
     title2: "Studio",
-    chineseName: "深幀工作室有限公司",
+    subtitle: "深幀工作室有限公司",
     tagline:
       "We craft immersive gaming experiences that push the boundaries of creativity and technology. Every frame tells a story.",
     cta1: "Explore Our Games",
@@ -249,7 +286,7 @@ const en: Dictionary = {
     title: "Crafting Worlds, ",
     titleFaded: "One Frame at a Time",
     description:
-      "Deep Frame Studio Limited is an independent game development company dedicated to building memorable interactive experiences. From concept art to final release, we handle every stage of development with care and precision.",
+      "Deep Frame Studio Limited is a Hong Kong-based game company focused on creating anime and ACG-style games. We offer full-spectrum services from game design, development, art, to publishing.",
     mission: {
       title: "Our Mission",
       description:
@@ -351,7 +388,7 @@ const en: Dictionary = {
       {
         question: "What does Deep Frame Studio do?",
         answer:
-          "Deep Frame Studio Limited is an independent game development company based in Hong Kong, focused on crafting immersive interactive gaming experiences. We offer full-spectrum services from game design, development, art, to publishing.",
+          "Deep Frame Studio Limited is a Hong Kong-based game company focused on creating anime and ACG-style games. We offer full-spectrum services from game design, development, art, to publishing.",
       },
       {
         question: "What is Isekai HKV?",
@@ -369,6 +406,24 @@ const en: Dictionary = {
           "Yes, we offer comprehensive game development services including game design, programming, UI/UX design, art & animation, sound design, and publishing support. Contact us to discuss your project needs.",
       },
     ],
+  },
+  media: {
+    label: "Media Coverage",
+    title: "Press & Media",
+    description: "News and press coverage about Deep Frame Studio.",
+    articles: [
+      {
+        title: "Ming Pao Feature Article",
+        source: "Ming Pao",
+        date: "2025-10-17",
+        url: "https://news.mingpao.com/pns/%E5%89%AF%E5%88%8A/article/20251017/s00005/1760631058140",
+        description: "Ming Pao feature coverage on Deep Frame Studio and its game development journey.",
+      },
+    ],
+    imageSection: {
+      title: "Coverage Images",
+      placeholder: "Place media coverage images in the public/assets/media/ folder",
+    },
   },
 };
 

@@ -35,7 +35,7 @@ export default function Games({ dict }: GamesProps) {
               <div className="relative text-center px-8">
                 <Gamepad2 size={48} className="text-white/40 mx-auto mb-4" />
                 <span className="text-white/60 text-4xl sm:text-5xl font-bold tracking-tight">
-                  Isekai HKV
+                  {g.isekaiHKV.title}
                 </span>
               </div>
             </div>
